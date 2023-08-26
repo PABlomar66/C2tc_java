@@ -1,4 +1,4 @@
-package com.tnsif.programs.demo.prg;
+package com.tnsif.programs.prg;
 
 import java.util.Scanner;
 
