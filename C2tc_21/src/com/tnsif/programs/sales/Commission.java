@@ -1,70 +1,57 @@
 package com.tnsif.programs.sales;
 
-import java.util.Scanner;
+
 
 public class Commission {
-    private String name;
-    private String address;
-    private String phone;
-    private double salesAmount;
-
-    public void acceptDetails() {
-        try (Scanner scanner = new Scanner(System.in)) {
-			System.out.print("Enter Name: ");
-			setName(scanner.nextLine());
-
-			System.out.print("Enter Address: ");
-			setAddress(scanner.nextLine());
-
-			System.out.print("Enter Phone: ");
-			setPhone(scanner.nextLine());
-
-			System.out.print("Enter Sales Amount: ");
-			salesAmount = scanner.nextDouble();
-		}
-    }
-
-    public void calculateCommission() {
-        double commission = 0.0;
-
-        if (salesAmount >= 100000) {
-            commission = 0.1 * salesAmount; // 10% commission
-        } else if (salesAmount >= 50000) {
-            commission = 0.05 * salesAmount; // 5% commission
-        } else if (salesAmount >= 30000) {
-            commission = 0.03 * salesAmount; // 3% commission
-        }
-
-        System.out.println("Commission: $" + commission);
-    }
-
-    public static void main(String[] args) {
-        Commission commissionObj = new Commission();
-        commissionObj.acceptDetails();
-        commissionObj.calculateCommission();
-    }
-
+	String name,address;
+	int phone,sales_amount;
+		
+	void getDetails(String name,String address,int phone , int sales_amount) {		
+		this.name=name;
+		this.address=address;
+		this.phone=phone;
+		this.sales_amount=sales_amount;
+	}
+	void calculate() {
+		
+	}
+	
+	
+	
+	//Setters and Getters
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public String getAddress() {
 		return address;
 	}
-
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
-	public String getPhone() {
+	public int getPhone() {
 		return phone;
 	}
-
-	public void setPhone(String phone) {
+	public void setPhone(int phone) {
 		this.phone = phone;
 	}
+	public int getSales_amount() {
+		return sales_amount;
+	}
+	public void setSales_amount(int sales_amount) {
+		this.sales_amount = sales_amount;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Commission [name=" + name + ", address=" + address + ", phone=" + phone + ", sales_amount="
+				+ sales_amount + "]";
+	}
+	
+	
+
 }

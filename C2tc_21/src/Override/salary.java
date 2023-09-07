@@ -1,4 +1,4 @@
-package inheritance;
+package Override;
 
 public class salary extends personal {
 

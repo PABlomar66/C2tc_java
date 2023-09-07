@@ -1,4 +1,5 @@
-package inheritance;
+package Override;
+
 public class Out {
 
 	public static void main(String[] args) {
